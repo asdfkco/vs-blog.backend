@@ -1,22 +1,23 @@
 {
-  "name": "homepage",
+  "name": "vs_blog.backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asdfkco/vs-blog.backend.git"
+    "url": "git+https://github.com/asdfptj/vs_blog.backend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/asdfkco/vs-blog.backend/issues"
+    "url": "https://github.com/asdfptj/vs_blog.backend/issues"
   },
-  "homepage": "https://github.com/asdfkco/vs-blog.backend#readme",
+  "homepage": "https://github.com/asdfptj/vs_blog.backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
