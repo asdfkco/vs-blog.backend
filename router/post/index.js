@@ -1,39 +1,30 @@
 const express = require("express");
 const fs = require("fs");
 const matter = require("gray-matter");
-const postsDirectory = `${process.cwd()}/_post`;
-
+const postDirectory = `${process.cwd()}/post`;
 const router = express.Router();
-
 router.get("/", (req, res) => {
-  res.send("/post 다아아아아아");
+  res.send("post");
 });
-
 router.get("/all", (req, res) => {
-  const postData = getChildPost(postsDirectory);
+  const postDate = getChildPost(postDirectory);
   function getChildPost(path) {
     const result = fs.readdirSync(path);
-
     return result.reduce((sum, current) => {
       const isPost = current.includes(".md");
-
       if (isPost) {
         const notExt = current.replace(".md", "");
-
         const result = fs.readFileSync(`${path}/${current}`, {
           encoding: "utf-8",
         });
-
-        const cunvertedData = matter(result);
-
+        const convertedData = matter(result);
         sum.push({
           type: "post",
           title: notExt,
-          path: `${path.replace(postsDirectory, "")}/${notExt}`,
-
+          path: `${path.replace(postDirectory, "")}/${notExt}`,
           data: {
-            ...cunvertedData.data,
-            content: cunvertedData.content,
+            ...convertedData.data,
+            content: convertedData.content,
           },
         });
       } else {
@@ -46,7 +37,6 @@ router.get("/all", (req, res) => {
       return sum;
     }, []);
   }
-  res.json(postData);
+  res.json(postDate);
 });
-
 module.exports = router;

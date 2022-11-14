@@ -1,5 +1,5 @@
 {
-  "name": "vs_blog.backend",
+  "name": "react-blog-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asdfptj/vs_blog.backend.git"
+    "url": "git+https://github.com/SHD-Sihyeon/React-Blog-Backend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/asdfptj/vs_blog.backend/issues"
+    "url": "https://github.com/SHD-Sihyeon/React-Blog-Backend/issues"
   },
-  "homepage": "https://github.com/asdfptj/vs_blog.backend#readme",
+  "homepage": "https://github.com/SHD-Sihyeon/React-Blog-Backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
